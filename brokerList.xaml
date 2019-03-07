@@ -1,0 +1,38 @@
+﻿<Page x:Class="ClientLourdWpf.brokerList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientLourdWpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="brokerList">
+
+    <Grid  Background="White"  Loaded="page_Loaded">
+        <DockPanel Height="400">
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" Height="400" Width="610" SelectionChanged="brokerDataGrid_SelectionChanged" Margin="10,0,0,0">
+                <DataGrid.Columns>
+                    <!--<DataGridTextColumn x:Name="idCustomersColumn" Binding="{Binding idCustomers}" Header="id Customers" Width="*"/>-->
+                    <DataGridTextColumn x:Name="lastName" Binding="{Binding lastName}" Header="Nom" Width="*"/>
+                    <DataGridTextColumn x:Name="firstName" Binding="{Binding firstName}" Header="Prénom" Width="*"/>
+                    <DataGridTextColumn x:Name="mail" Binding="{Binding mail}" Header="Mail" Width="*"/>
+                    <DataGridTextColumn x:Name="phoneNumber" Binding="{Binding phoneNumber}" Header="Tel." Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Width="150" Height="300" Margin="5,20,0,0">
+                <TextBlock HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Nom :" VerticalAlignment="Top"/>
+                <TextBox x:Name="editLastName" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Text="{Binding lastName}" Margin="0,0,5,0" />
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Prénom :" VerticalAlignment="Top"/>
+                <TextBox x:Name ="editFirstName" HorizontalAlignment="Right" Height="23"  TextWrapping="Wrap" Text="{Binding Path=firstName}" VerticalAlignment="Top" Width="140" Margin="0,0,5,0"/>
+                <TextBlock HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Mail :" VerticalAlignment="Top"/>
+                <TextBox x:Name ="editMail" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="{Binding Path=mail}" VerticalAlignment="Top" Width="140" Margin="0,0,5,0"/>
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Tel. :" VerticalAlignment="Top"/>
+                <TextBox x:Name="editPhoneNumber" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="{Binding Path=phoneNumber}" VerticalAlignment="Top" Width="140" Margin="0,0,5,0"/>
+                <DockPanel Height="100" Margin="0,10,0,0">
+                    <Button Content="Modifier" Click="Button_Click" Width="70" Margin="0,0,5,0" Background="#FF00B230" FontWeight="Bold" />
+                    <Button Content="Supprimer" Margin="0" Background="#FFF90B0B" FontWeight="Bold" Click="Button_Click_1"/>
+                </DockPanel>
+            </StackPanel>
+            </DockPanel>
+    </Grid>
+</Page>
