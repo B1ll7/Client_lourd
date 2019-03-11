@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\App.xaml
-51973162203
+7-546590412
 
-13-721561719
+151948518205
 18923265554
-addBroker.xaml;addCustomer.xaml;brokerList.xaml;customersList.xaml;MainWindow.xaml;
+addAppointment.xaml;addBroker.xaml;addCustomer.xaml;appointmentList.xaml;brokerList.xaml;customersList.xaml;MainWindow.xaml;
 
 False
 

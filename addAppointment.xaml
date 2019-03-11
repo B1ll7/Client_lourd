@@ -1,0 +1,38 @@
+﻿<Page x:Class="ClientLourdWpf.addAppointment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientLourdWpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="addAppointment">
+
+    <Grid Loaded="Combobox_Loaded">
+        <TextBlock Height="40" Margin="0,-410,0,0" TextAlignment="Center" FontSize="20" Background="Black" Foreground="White" FontWeight="Bold" VerticalAlignment="Center">Ajouter un rendez-vous</TextBlock>
+        <StackPanel Height="300">
+            <Label HorizontalAlignment="Center">Choisir client :</Label>
+                <!--combobox pour les clients DisplayMemberPath important -->
+            <ComboBox Height="30" Width="200" x:Name="comboboxCustomer" DisplayMemberPath="lastName" SelectedValuePath="idCustomer" />
+            <Label HorizontalAlignment="Center">Choisir courtier :</Label>
+                <!--combobox pour les courtiers-->
+            <ComboBox Height="30" Width="200"  x:Name="comboboxBroker"  DisplayMemberPath="lastName" SelectedValuePath="idBroker" />
+                <!--date des rendez-vous-->
+                <DatePicker Height="30" Width="200" Margin="0,10,0,0" x:Name="date"/>
+            <DockPanel Width="200">
+                <Label Margin="0,0,10,0">Heure</Label>
+                <Label  Margin="70,0,0,0">Min</Label>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Center">
+                <!--heure du rendez-vous-->
+                <TextBox x:Name="Hour" Height="20"  Width="100" Margin="0,0,10,0" PreviewTextInput="preventString" MaxLength="2"/>
+                <!--mine du rendez-vous-->
+                <TextBox x:Name="Min" Height="20"  Width="100" PreviewTextInput="preventString" MaxLength="2"/>
+            </DockPanel>
+            <DockPanel Width="300" Margin="0,10,0,0" HorizontalAlignment="Center">
+                <Button Width="100" Margin="35,0,0,0" Background="Red" Foreground="White" FontWeight="Bold">Annuler</Button>
+                <Button Width="100" Foreground="White" Background="Green" FontWeight="Bold" Click="Button_Click">Enregistrer</Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -24,33 +24,40 @@ namespace ClientLourdWpf
         {
             InitializeComponent();
         }
-        private void AddCustomer_Click(object sender, RoutedEventArgs e)
-        {
-            ////Window addCustomer = new Window();
-            ////addCustomer.Show();
-            //addCostumer addCostumer = new addCostumer();
-            //this.Visibility = Visibility.Hidden;
-            //addCostumer.Show();
-        }
-
+        //Methode permettant d'acceder à la page addCustomer
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             main.Content = new addCostumer();
         }
-
+        //Methode permettant d'acceder à la page customerList
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             main.Content = new customersList();
         }
-
+        //Methode permettant d'acceder à la page addBroker
         private void MenuItem_Broker_Click(object sender, RoutedEventArgs e)
         {
             main.Content = new addBroker();
         }
-
+        //Methode permettant d'acceder à la page brokerList
         private void MenuItem_Broker_Click_1(object sender, RoutedEventArgs e)
         {
+            main.Content = new brokerList();
+        }
+
+        private void page_loaded(object sender, RoutedEventArgs e)
+        {
             main.Content = new addBroker();
+        }
+        //Methode permettant d'acceder à la page addAppointment
+        private void MenuItem_Appointment_Click(object sender, RoutedEventArgs e)
+        {
+            main.Content = new addAppointment();
+        }
+        //Methode permettant d'acceder à la page AppointmentList
+        private void MenuItem_Appointment_Click_1(object sender, RoutedEventArgs e)
+        {
+            main.Content = new appointmentList();
         }
     }
 }

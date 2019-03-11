@@ -17,6 +17,10 @@
                     <MenuItem Header="Ajout Coutier" Click="MenuItem_Broker_Click" />
                     <MenuItem Header="Liste Courtier" Click="MenuItem_Broker_Click_1" />
                 </MenuItem>
+                <MenuItem Header="Rendez-vous" Height="20" Width="100">
+                    <MenuItem Header="Ajouter RDV" Click="MenuItem_Appointment_Click" />
+                    <MenuItem Header="Liste RDV" Click="MenuItem_Appointment_Click_1" />
+                </MenuItem>
             </Menu>
         </StackPanel>
         <Frame x:Name="main"></Frame>

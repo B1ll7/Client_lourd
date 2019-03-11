@@ -30,6 +30,10 @@ namespace ClientLourdWpf
             InitializeComponent();
             broker = new brokers();
         }
+        private void page_Loaded(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = db.brokers.ToList();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string regexName = @"^[A-Za-zéèàêâôûùïüç-]+$";
@@ -71,6 +75,33 @@ namespace ClientLourdWpf
                 dataGrid.Items.Refresh();
                 MessageBox.Show("Ca marche");
             }
+        }
+
+        private void brokerDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dataGrid.SelectedItem == null) return;
+            broker = dataGrid.SelectedItem as brokers;
+            idtodel = broker.idBroker;
+            // On attribue a chaque champ prévu la valeur de l'element selectionner
+            editLastName.Text = broker.lastName;
+            editFirstName.Text = broker.firstName;
+            editMail.Text = broker.mail;
+            editPhoneNumber.Text = broker.phoneNumber;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            db.brokers.Remove(broker);
+            broker = db.brokers.Find(idtodel);
+            db.brokers.Remove(broker);
+            db.SaveChanges();
+            dataGrid.ItemsSource = null;
+            dataGrid.ItemsSource = db.brokers.ToList();
+            MessageBox.Show("Ca marche");
+            editLastName.Text = " ";
+            editFirstName.Text = " ";
+            editMail.Text = " ";
+            editPhoneNumber.Text = " ";
         }
     }
 }

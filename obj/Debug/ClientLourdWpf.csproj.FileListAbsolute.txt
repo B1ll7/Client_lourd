@@ -27,3 +27,7 @@ C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\addBroker.g.cs
 C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\addBroker.baml
 C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\brokerList.g.cs
 C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\brokerList.baml
+C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\addAppointment.g.cs
+C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\addAppointment.baml
+C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\appointmentList.g.cs
+C:\Users\Moi\source\repos\WpfApp1\ClientLourdWpf\obj\Debug\appointmentList.baml
